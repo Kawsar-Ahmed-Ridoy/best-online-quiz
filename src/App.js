@@ -1,18 +1,18 @@
-import { createContext } from 'react';
 import { createBrowserRouter, RouterProvider,  } from 'react-router-dom';
 import './App.css';
 import Blogs from './components/Blogs/Blogs';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 import Home from './components/Home/Home';
 import Quizzes from './components/Quizzes/Quizzes';
 import Statistics from './components/Statistics/Statistics';
 import Main from './layouts/Main';
 
-const QuizContext = createContext('hi')
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
+      errorElement: <ErrorPage></ErrorPage>,
       element: <Main></Main>,
       children: [
         {
@@ -42,9 +42,9 @@ function App() {
           element: <Quizzes></Quizzes>
         },
         
-        {
-          path: '*', element: <div className='fs-1 mt-5 bg-danger text-white w-100 text-center'>This route not found</div>
-        }
+        // {
+        //   path: '*', element: <div className='mt-5  text-white w-100 text-center'><h1 className='bg-danger d-inline px-2'>This route not found</h1></div>
+        // }
       ]
     }
     
@@ -52,7 +52,6 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
-      <QuizContext.Provider></QuizContext.Provider>
     </div>
   );
 }

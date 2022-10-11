@@ -5,7 +5,6 @@ import toast, { Toaster } from "react-hot-toast";
 
 
 const Quiz = ({ quiz }) => {
-    console.log(quiz);
   const { options, id, question, correctAnswer } = quiz;
   const notify = () => toast(
     `${correctAnswer}`,
@@ -26,21 +25,16 @@ const Quiz = ({ quiz }) => {
         <FontAwesomeIcon icon={faEye} onClick={notify}  />
         <Toaster></Toaster>
       </div>
-      
-      
       </div>
 
         <div className="d-flex flex-wrap justify-content-evenly">
         {
-        options.map(ans => <div className="d-flex p-4  ">
+        options.map(option => <div className="d-flex p-4  ">
             <div className="my-auto me-2  "><input type="radio" name="gander"></input></div>
-            <div className="m-auto"><h4>{ans}</h4></div>
+            <div className="m-auto"><h4>{option}</h4></div>
         </div> )
         }
         </div>
-
-      
-
     </div>
   );
 };
