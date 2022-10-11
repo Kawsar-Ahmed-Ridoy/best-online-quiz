@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div className='container'>
             <Header></Header>
-            <div className='d-flex flex-wrap gap-4 justify-content-between justify-content-sm-center '>
+            <div style={{left: "50%"}} className='d-flex flex-wrap gap-4 justify-content-between justify-content-sm-center '>
               {
                 data.map(item => 
                     <Items

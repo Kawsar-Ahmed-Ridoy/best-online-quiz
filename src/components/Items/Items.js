@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Items = ({item}) => {
     const {id, name, logo, total} = item
     return (
-        <div className="">
+        <div className="mx-auto">
             <Card style={{ width: '18rem',  }}>
         <Card.Img className='bg-black rounded-2' variant="top" src={logo} />      
         <Card.Body className='my-3 d-flex justify-content-between '>
