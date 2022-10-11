@@ -8,7 +8,11 @@ const NavBar = () => {
         <div className=''>
  <Navbar className='' bg="light" expand="lg">
       <Container>
-        <Navbar.Brand className='fw-bold text-primary fs-2 ' to="/">Best Online Quiz</Navbar.Brand>
+        <Navbar.Brand>
+          <Link className='fw-bold text-primary fs-2 text-decoration-none' to="/"    >
+          Best Online Quiz
+          </Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto fw-bold ">

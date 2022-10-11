@@ -5,12 +5,13 @@ import Items from '../Items/Items';
 
 const Home = () => {
     const items = useLoaderData();
+    const {data} = items;
     return (
         <div className='container'>
             <Header></Header>
-            <div className='d-flex flex-wrap gap-4 justify-content-between '>
+            <div className='d-flex flex-wrap gap-4 justify-content-between justify-content-sm-center '>
               {
-                items.data.map(item => 
+                data.map(item => 
                     <Items
                 key={item.id}
                 item={item}
