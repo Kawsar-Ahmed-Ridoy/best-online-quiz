@@ -2,7 +2,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blogs from './components/Blogs/Blogs';
 import Home from './components/Home/Home';
-import Quiz from './components/Quiz/Quiz';
+import Statistics from './components/Statistics/Statistics]';
+
 import Main from './layouts/Main';
 
 function App() {
@@ -20,8 +21,8 @@ function App() {
           element: <Home></Home>,
         },
         {
-          path:"/quiz",
-          element:<Quiz></Quiz>
+          path:"/statistics",
+          element: <Statistics></Statistics>
         },
         {
           path:"/blogs",

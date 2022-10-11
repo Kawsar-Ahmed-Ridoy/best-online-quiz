@@ -13,7 +13,7 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto fw-bold ">
             <Link className='mx-4 text-decoration-none ' to="/home">Home</Link>
-            <Link className='mx-4 text-decoration-none' to="/quiz">Quiz</Link>
+            <Link className='mx-4 text-decoration-none' to="/statistics">Statistics</Link>
             <Link className='mx-4 text-decoration-none' to="/blogs">Blogs</Link>
 
           </Nav>
