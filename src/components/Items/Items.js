@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 const Items = ({item}) => {
     const {id, name, logo, total} = item
@@ -13,7 +14,10 @@ const Items = ({item}) => {
           <Card.Text>
            Quiz: {total}
           </Card.Text>
+          <Link to={`/quizzes/${id}`}>
           <Button variant="primary">Start Quiz</Button>
+          </Link>
+          
         </Card.Body>
       </Card>
         </div>
