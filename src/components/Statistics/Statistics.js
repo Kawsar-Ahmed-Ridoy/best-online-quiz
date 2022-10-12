@@ -1,15 +1,15 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,  } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,  } from 'recharts';
 
 const Statistics = () => {
 const clickData = useLoaderData();
 const {data} = clickData;
  
      return (
-      <div className='container w-100 mt-5'>
-       
-         <LineChart className='mx-auto' 
+      
+       <ResponsiveContainer className='container' width="100%" height="100%">
+          <LineChart className='mx-auto' 
           width={500}
           height={300}
           data={data}
@@ -27,8 +27,10 @@ const {data} = clickData;
           <Legend />
           <Line type="monotone" dataKey="total" stroke="#8884d8" activeDot={{ r: 8 }} />
         </LineChart>
+       </ResponsiveContainer>
+       
 
-      </div>
+
   );
   }
 
