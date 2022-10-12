@@ -2,12 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import React from "react";
 import toast, { Toaster } from "react-hot-toast";
+import Select from "../Select/Select";
 
 
 const Quiz = ({ quiz }) => {
   const { options, id, question, correctAnswer } = quiz;
   const notify = () => toast(
-    `${correctAnswer}`,
+    `   Correct Answer: => 
+    ${correctAnswer}`,
     {
       duration: 6000,
     }
@@ -29,10 +31,11 @@ const Quiz = ({ quiz }) => {
 
         <div className="d-flex flex-wrap justify-content-evenly">
         {
-        options.map(option => <div className="d-flex p-4  ">
-            <div className="my-auto me-2  "><input type="radio" name="gander"></input></div>
-            <div className="m-auto"><h4>{option}</h4></div>
-        </div> )
+        options.map(option => <Select
+          option={option}
+          key={id}
+          correct={correctAnswer}
+        ></Select> )
         }
         </div>
     </div>
