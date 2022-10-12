@@ -18,7 +18,7 @@ const NavBar = () => {
           <Nav className="ms-auto fw-bold ">
             <Link className='mx-4 text-decoration-none' to="/home">Home</Link>
             <Link className='mx-4 text-decoration-none' to="/statistics">Statistics</Link>
-            <Link className='mx-4 text-decoration-none' to="/blogs">Blogs</Link>
+            <Link className='ms-4 text-decoration-none' to="/blogs">Blogs</Link>
 
           </Nav>
         </Navbar.Collapse>
